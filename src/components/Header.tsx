@@ -28,7 +28,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
+          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-soft"
           : "bg-transparent"
       }`}
     >
@@ -43,6 +43,12 @@ const Header = () => {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
             <button
+              onClick={() => scrollToSection("valores")}
+              className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider"
+            >
+              Valores
+            </button>
+            <button
               onClick={() => scrollToSection("oferta")}
               className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider"
             >
@@ -52,22 +58,16 @@ const Header = () => {
               onClick={() => scrollToSection("oferta")}
               className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider"
             >
-              Benefícios
-            </button>
-            <button
-              onClick={() => scrollToSection("oferta")}
-              className="text-muted-foreground hover:text-primary transition-colors text-sm uppercase tracking-wider"
-            >
               Sobre
             </button>
             <Button variant="gold" size="sm" onClick={scrollToOffer}>
-              Agendar
+              Comprar agora
             </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden w-10 h-10 flex items-center justify-center"
+            className="md:hidden w-10 h-10 flex items-center justify-center text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -81,8 +81,14 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border">
+        <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border shadow-soft">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
+            <button
+              onClick={() => scrollToSection("valores")}
+              className="text-left text-foreground hover:text-primary transition-colors py-2"
+            >
+              Valores
+            </button>
             <button
               onClick={() => scrollToSection("oferta")}
               className="text-left text-foreground hover:text-primary transition-colors py-2"
@@ -93,16 +99,10 @@ const Header = () => {
               onClick={() => scrollToSection("oferta")}
               className="text-left text-foreground hover:text-primary transition-colors py-2"
             >
-              Benefícios
-            </button>
-            <button
-              onClick={() => scrollToSection("oferta")}
-              className="text-left text-foreground hover:text-primary transition-colors py-2"
-            >
               Sobre
             </button>
             <Button variant="gold" onClick={scrollToOffer} className="w-full mt-2">
-              Agendar Agora
+              Comprar agora
             </Button>
           </nav>
         </div>

@@ -7,6 +7,7 @@ import GoldPeelingSection from "@/components/sections/GoldPeelingSection";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import StepsSection from "@/components/sections/StepsSection";
 import CareSection from "@/components/sections/CareSection";
+import PricingSection from "@/components/sections/PricingSection";
 import OfferSection from "@/components/sections/OfferSection";
 import AboutSection from "@/components/sections/AboutSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
@@ -36,6 +37,7 @@ const Index = () => {
           <BenefitsSection />
           <StepsSection />
           <CareSection />
+          <PricingSection />
           <OfferSection />
           <AboutSection />
           <TestimonialsSection />
