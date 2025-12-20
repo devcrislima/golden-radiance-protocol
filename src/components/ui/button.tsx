@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -15,11 +15,18 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Premium gold variants
+        gold: "bg-primary text-primary-foreground font-semibold uppercase tracking-wider hover:shadow-[0_8px_40px_hsl(43_74%_49%_/_0.35)] hover:scale-[1.02] active:scale-[0.98]",
+        goldOutline: "border-2 border-primary text-primary bg-transparent hover:bg-primary hover:text-primary-foreground font-semibold uppercase tracking-wider",
+        premium: "bg-gradient-to-r from-[hsl(43,70%,35%)] via-[hsl(43,74%,49%)] to-[hsl(43,80%,65%)] text-primary-foreground font-bold uppercase tracking-widest shadow-[0_4px_30px_hsl(43_74%_49%_/_0.3)] hover:shadow-[0_8px_50px_hsl(43_74%_49%_/_0.5)] hover:scale-[1.03] active:scale-[0.98] relative overflow-hidden",
+        elegant: "bg-secondary border border-border text-foreground hover:border-primary hover:text-primary font-medium tracking-wide",
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-10 text-base",
+        xxl: "h-16 rounded-lg px-12 text-lg",
         icon: "h-10 w-10",
       },
     },
