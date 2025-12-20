@@ -18,27 +18,27 @@ const CareSection = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-secondary/30">
+    <section className="py-20 lg:py-32 bg-gradient-to-b from-cream via-secondary/30 to-cream">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <span className="inline-block text-sm font-medium text-primary uppercase tracking-widest mb-4">
               Orientações Importantes
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground">
               Cuidados <span className="gold-gradient-text">Essenciais</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Before */}
-            <div className="p-8 rounded-2xl bg-card border border-border">
+            <div className="p-8 rounded-2xl bg-card border border-border shadow-soft">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <AlertCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-medium">Antes</h3>
+                  <h3 className="font-serif text-2xl font-medium text-foreground">Antes</h3>
                   <p className="text-sm text-muted-foreground">do procedimento</p>
                 </div>
               </div>
@@ -56,13 +56,13 @@ const CareSection = () => {
             </div>
 
             {/* After */}
-            <div className="p-8 rounded-2xl bg-card border border-primary/30">
+            <div className="p-8 rounded-2xl bg-card border border-primary/30 shadow-soft">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center">
                   <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-medium">Depois</h3>
+                  <h3 className="font-serif text-2xl font-medium text-foreground">Depois</h3>
                   <p className="text-sm text-muted-foreground">do tratamento</p>
                 </div>
               </div>

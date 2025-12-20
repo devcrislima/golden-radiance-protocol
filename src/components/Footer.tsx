@@ -9,19 +9,24 @@ const Footer = () => {
   return (
     <footer className="relative overflow-hidden">
       {/* Final CTA */}
-      <div className="bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 py-16">
+      <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4">
-            Pronta para <span className="gold-gradient-text">transformar</span> sua pele?
+          <h2 className="font-serif text-3xl md:text-4xl font-medium mb-4 text-foreground">
+            Pronto para <span className="gold-gradient-text">transformar</span> sua pele?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
             Agende agora e descubra o poder do rejuvenescimento natural 
             com BOTOX + Peeling de Ouro.
           </p>
-          <Button variant="premium" size="xl" onClick={scrollToOffer} className="group">
-            Garantir Meu Tratamento
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="premium" size="xl" onClick={scrollToOffer} className="group gold-shimmer">
+              Comprar agora
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
+            <Button variant="goldOutline" size="xl" onClick={scrollToOffer}>
+              Agendar meu Glow Dourado
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -32,7 +37,7 @@ const Footer = () => {
             {/* Logo */}
             <div>
               <h3 className="font-serif text-2xl font-medium mb-2">
-                <span className="gold-gradient-text">Solar</span> Derma
+                <span className="gold-gradient-text">Solar</span> <span className="text-foreground">Derma</span>
               </h3>
               <p className="text-sm text-muted-foreground">
                 Estética Avançada
@@ -55,7 +60,7 @@ const Footer = () => {
             <div className="flex justify-end">
               <a
                 href="#"
-                className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-foreground"
               >
                 <Instagram className="w-5 h-5" />
               </a>
