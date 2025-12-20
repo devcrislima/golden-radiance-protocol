@@ -1,13 +1,49 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import TreatmentSection from "@/components/sections/TreatmentSection";
+import BotoxSection from "@/components/sections/BotoxSection";
+import GoldPeelingSection from "@/components/sections/GoldPeelingSection";
+import BenefitsSection from "@/components/sections/BenefitsSection";
+import StepsSection from "@/components/sections/StepsSection";
+import CareSection from "@/components/sections/CareSection";
+import OfferSection from "@/components/sections/OfferSection";
+import AboutSection from "@/components/sections/AboutSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import PostPurchaseSection from "@/components/sections/PostPurchaseSection";
+import { Helmet } from "react-helmet";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <>
+      <Helmet>
+        <title>BOTOX + Peeling de Ouro | Solar Derma - Rejuvenescimento Natural</title>
+        <meta 
+          name="description" 
+          content="Tratamento exclusivo de BOTOX + Peeling de Ouro para rejuvenescimento natural. Linhas suavizadas, pele iluminada e resultados visíveis. Agende na Solar Derma." 
+        />
+        <meta name="keywords" content="botox, peeling de ouro, rejuvenescimento, estética facial, solar derma, tratamento facial" />
+        <link rel="canonical" href="https://solarderma.com.br" />
+      </Helmet>
+
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          <HeroSection />
+          <TreatmentSection />
+          <BotoxSection />
+          <GoldPeelingSection />
+          <BenefitsSection />
+          <StepsSection />
+          <CareSection />
+          <OfferSection />
+          <AboutSection />
+          <TestimonialsSection />
+          <PostPurchaseSection />
+        </main>
+        <Footer />
       </div>
-    </div>
+    </>
   );
 };
 
